@@ -29,22 +29,16 @@ namespace Last3NumbersModulo3
         {
             List<int> Numbers = new List<int>();
             Random rnd = new Random();
-            int rnd1, rnd2, rnd3;
-            rnd1 = rnd.Next(10, 20);
-            rnd2 = rnd.Next(10, 20);
-            rnd3 = rnd.Next(10, 20);
-            Numbers.Add(rnd1);
-            Numbers.Add(rnd2);
-            Numbers.Add(rnd3);
+            Numbers.Add(rnd.Next(10, 20));
+            Numbers.Add(rnd.Next(10, 20));
+            Numbers.Add(rnd.Next(10, 20));
             return Numbers;
         }
         static bool Check(List<int> Numbers)
         {
-            Random rnd = new Random();
-            int index1 = Numbers.Count - 1;
-            int index2 = Numbers.Count - 2;
-            int index3 = Numbers.Count - 3;
-            if (Numbers[index1] % 3 == 0 && Numbers[index2] % 3 == 0 && Numbers[index3] % 3 == 0)
+            if (Numbers[Numbers.Count - 1] % 3 == 0 && 
+                Numbers[Numbers.Count - 2] % 3 == 0 && 
+                Numbers[Numbers.Count - 3] % 3 == 0)
             {
                 return true;
             }
