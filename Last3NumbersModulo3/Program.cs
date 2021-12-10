@@ -15,7 +15,7 @@ namespace Last3NumbersModulo3
                 Numbers.Add(rnd.Next(10, 20));
             }
             // Pod spodem printuje ostatnie 3 liczby z Listy, ktore sa podzielne przez 3
-            Console.WriteLine("Liczby podzielne przez 3:");
+            Console.WriteLine("Ostatnie 3 liczby podzielne przez 3:");
             for (int i = Numbers.Count - 1; i >= Numbers.Count - 3; i--)
             {
                 Console.WriteLine($"{Numbers[i]}, ");
@@ -23,7 +23,7 @@ namespace Last3NumbersModulo3
 
             // ponizej printuje wszystkie elementy listy
             Console.WriteLine();
-            foreach (var number in Numbers) Console.WriteLine($"{number}, ");
+            foreach (var number in Numbers) Console.Write($"{number}, ");
         }
         static List<int> FirstGen()
         {
